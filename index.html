@@ -4,183 +4,245 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Calia- Front End Web Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
   <!-- Side menu -->
   <aside class="sideMenu"> 
-    <nav>
-      <p class="logo">AC</p>
+    <p class="logo">Ac</p>
 
+    <nav>
       <ul class="navBar">
         <li class="homeNav">
-            Home
+          <a href="#home">
+            <i class="lni lni-home"></i>
+            <!-- <span>HOME</span> -->
+          </a>
         </li>
         <li class="aboutNav">
-            About
+          <a href="#about">
+            <i class="lni lni-user"></i>
+            <!-- <span>ABOUT</span> -->
+          </a>
         </li>
         <li class="skillsNav">
-            Skills
+          <a href="#skills">
+            <i class="lni lni-code-alt"></i>
+            <!-- <span>SKILLS</span> -->
+          </a>
         </li>
-        <li class="projectsNav">
-            Projects
+        <li class="worksNav">
+          <a href="#works">
+            <i class="lni lni-briefcase"></i>
+            <!-- <span>WORKS</span> -->
+          </a>
         </li>
         <li class="contactNav">
-            Contact
+          <a href="#contact">
+            <i class="lni lni-phone"></i>
+            <!-- <span>CONTACT</span> -->
+          </a>
         </li>
       </ul>
-
-      <div class="scrollDown"></div>
     </nav>
+
+    <div class="scrollDown"></div>
   </aside>
   <!--Beginning of the wrapper -->
-  <div class="wrapper"> 
+  <div class="outerWrapper"> 
     <!-- Header -->
-    <header>
-      <div class="heroImageContainer"></div>
-      <div class="heroDescription">
-        <p>HI THERE !</p>
-        <h1>I'M ALEX CALIA</h1>
-        <p>Passionate about creating complex applications and experiences on the web.</p>
-      </div>
-    </header>
-    <!-- Beginning of Main -->
-    <main>
-      <!-- About Section -->
-      <section class="aboutSection" id="about">
-        <div class="sectionDescription">
-          <span class="line"></span><p>SOME INFO</p>
+    <div class="innerWrapper">
+      <header>
+        <div class="heroImageContainer">
+          <img src="assets/images/avatar.jpg" alt="A picture of Alex Calia">
         </div>
-        <h2>ABOUT ME</h2>
-
-        <div class="aboutMe"></div>
-      </section>
-
-      <!-- Skils Section -->
-      <section class="skillsSection" id="skill">
-        <div class="sectionDescription">
-          <span class="line"></span>
-          <p>CHECK OUT MY</p>
+        <div class="heroDescription">
+          <p>HI THERE !</p>
+          <h1>I'M ALEX CALIA</h1>
+          <p>Passionate about creating complex applications and experiences on the web.</p>
+          <div class="socialsResume">
+            <a class="resumeLink" href="assets/Alex Calia- Resume.pdf" alt="Alex Calia's resumé">Resumé</a>
+            <ul class="socialsList">
+              <li>
+                <a href="https://www.linkedin.com/in/alexander-calia-33190337/"><i class="lni lni-linkedin-original"></i></a>
+              </li>
+              <li>
+                <a href="https://github.com/alexcalia"><i class="lni lni-github-original"></i></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/AlexanderCalia"><i class="lni lni-twitter-original"></i></a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <h2>SKILLS</h2>
+      </header>
+      <!-- Beginning of Main -->
+      <main>
+        <!-- About Section -->
+        <section class="aboutSection" id="about">
+          <div class="sectionHead">
+            <span>SOME INFO</span>
+            <h2>ABOUT ME</h2>
+          </div>
+          
+          <div class="abouContainer sectionContainer"></div>
+        </section>
 
-        <div class="skillsContainer">
-          <ul class="skillsGrid">
-            <li>
-              <img src="assets/skills/html5.svg">
-              <p>HTML</p>
-            </li>
-            <li>
-              <img src="assets/skills/css3.svg">
-              <p>CSS</p>
-            </li>
-            <li>
-              <img src="assets/skills/sass-1.svg">
-              <p>SASS</p>
-            </li>
-            <li>
-              <img src="assets/skills/javascript.svg">
-              <p>Javascript</p>
-            </li>
-            <li>
-              <img src="assets/skills/jquery.svg">
-              <p>JQuery</p>
-            </li>
-            <li>
-              <img src="assets/skills/react-2.svg">
-              <p>React</p>
-            </li>
-            <li>
-              <img src="assets/skills/git-icon.svg">
-              <p>Git</p>
-            </li>
-            <li>
-              <img src="assets/skills/firebase-2.svg">
-              <p>Firebase</p>
-            </li>
-            <li>
-              <img src="assets/skills/visual-studio-code-1.svg">
-              <p>VS Code</p>
-            </li>
-            <li>
-              <img src="assets/skills/microsoft-windows-22.svg">
-              <p>Windows Environment</p>
-            </li>
-            <li>
-              <img src="assets/skills/microsoft-5.svg">
-              <p>Microsft 365</p>
-            </li>
-            <li>
-              <img>
-              <p>To be decided</p>
-            </li>
-          </ul>
-        </div>
-      </section>
+        <!-- Skils Section -->
+        <section class="skillsSection" id="skill">
+          <div class="sectionHead">
+            <span>CHECK OUT MY</span>
+            <h2>SKILLS</h2>
+          </div>
+        
+          <div class="skillsContainer sectionContainer">
+            <ul class="skillsGrid">
+              <li>
+                <div class="itemContainer">
+                  <img src="assets/skills/html-5.svg">
+                  <p>HTML</p>
+                </div>
+              </li>
+              <li>
+                <div class="itemContainer">
+                  <img src="assets/skills/css-3.svg">
+                  <p>CSS</p>
+                </div>
+              </li>
+              <li>
+                <div class="itemContainer">
+                  <img src="assets/skills/sass-1.svg">
+                  <p>SASS</p>
+                </div>
+              </li>
+              <li>
+                <div class="itemContainer">
+                  <img src="assets/skills/javascript.svg">
+                  <p>Javascript</p>
+                </div>
+              </li>
+              <li>
+                <div class="itemContainer">
+                  <img src="assets/skills/jquery.svg">
+                  <p>JQuery</p>
+                </div>
+              </li>
+              <li>
+                <div class="itemContainer">
+                  <img src="assets/skills/react-2.svg">
+                  <p>React</p>
+                </div>
+              <li>
+                <div class="itemContainer">
+                  <img src="assets/skills/git-icon.svg">
+                  <p>Git</p>
+                </div>
+              </li>
+              <li>
+                <div class="itemContainer">
+                  <img src="assets/skills/firebase-2.svg">
+                  <p>Firebase</p>
+                </div>
+              </li>
+              <li>
+                <div class="itemContainer">
+                  <img src="assets/skills/visual-studio-code-1.svg">
+                  <p>VS Code</p>
+                </div>
+              </li>
+              <li>
+                <div class="itemContainer">
+                  <img src="assets/skills/microsoft-windows-22.svg">
+                  <p>Windows</p>
+                </div>
+              </li>
+              <li>
+                <div class="itemContainer">
+                  <img src="assets/skills/microsoft-5.svg">
+                  <p>Microsoft 365</p>
+                </div>
+              </li>
+              <li>
+                <div class="itemContainer">
+                  <img>
+                  <p>To be decided</p>
+                </div>
+              </li>
+              <li>
+                <div class="itemContainer">
+                  <img>
+                  <p>To be decided</p>
+                </div>
+              </li>
+              <li>
+                <div class="itemContainer">
+                  <img>
+                  <p>To be decided</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
 
-      <!-- Works Section -->
-      <section class="worksSection" id="works">
-        <div class="sectionDescription">
-          <span class="line"></span>
-          <p>TAKE A LOOK AT</p>
-        </div>
-
-        <h2>MY WORKS</h2>
-
-        <div class="worksContainer">
-          <article class="workBox">
-            <h3>Work 1</h3>
-          </article>
-
-          <article class="workBox">
-            <h3>Work 2</h3>
-          </article>
-
-          <article class="workBox">
-            <h3>Work 3</h3>
-          </article>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="contactSection" id="contact">
-        <div class="sectionDescription">
-          <span class="line"></span>
-          <p>SAY HELLO</p>
-        </div>
-
-        <h2>CONTACT</h2>
-
-        <div class="contactContainer">
-          <h3>Get in Touch</h3>
-          <div class="contactTypes">
-            <div class="callContainer"></div>
-            <div class="emailContainer"></div>
+        <!-- Works Section -->
+        <section class="worksSection" id="works">
+          <div class="sectionHead">
+            <span>TAKE A LOOK AT MY</span>
+            <h2>WORKS</h2>
           </div>
 
-          <h3>Contact Form</h3>
+          <div class="worksContainer sectionContainer">
+            <article class="workBox">
+              <h3>Work 1</h3>
+            </article>
 
-          <form>
-            <fieldset>
-              <label for="nameInput"></label>
-              <input type="text" id="nameInput" class="nameInput" required>
-              <label for="emailInput"></label>
-              <input type="email" id="emailInput" class="emailInput" required>
-              <label for="subjectInput"></label>
-              <input type="text" id="subjectInput" class="subjectInput" required>
-              <label for="messageInput"></label>
-              <textarea id="messageInput" class="messageInput" required>
-            </fieldset>
-          </form>
-        </div> 
+            <article class="workBox">
+              <h3>Work 2</h3>
+            </article>
 
-      </section>
-    </main> <!-- End of Main -->
-    <!-- Footer -->
-    <footer></footer>
+            <article class="workBox">
+              <h3>Work 3</h3>
+            </article>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contactSection" id="contact">
+          <div class="sectionHead">
+            <span>SAY HELLO</span>
+            <h2>CONTACT</h2>
+          </div>
+
+          <div class="contactContainer sectionContainer">
+            <h3>Get in Touch</h3>
+            <div class="contactTypes">
+              <div class="callContainer"></div>
+              <div class="emailContainer"></div>
+            </div>
+
+            <h3>Contact Form</h3>
+
+            <form>
+                <label for="nameInput"></label>
+                <input type="text" id="nameInput" class="nameInput" required />
+                <label for="emailInput"></label>
+                <input type="email" id="emailInput" class="emailInput" required />
+                <label for="subjectInput"></label>
+                <input type="text" id="subjectInput" class="subjectInput" required />
+                <label for="messageInput"></label>
+                <textarea class="messageInput" id="messageInput" required></textarea>
+            </form>
+            
+          </div> 
+
+        </section>
+      </main> <!-- End of Main -->
+      <!-- Footer -->
+      <footer></footer>
+    </div>
   </div> <!-- End of the wrapper -->
 </body>
 </html>

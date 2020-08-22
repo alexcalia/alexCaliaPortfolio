@@ -1,0 +1,40 @@
+.sideMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 105px;
+  height: 100vh;
+  background-color: $purple;
+  position: fixed;
+  color: white;
+
+  p {
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    background-color: #773dc8;
+  }
+
+  nav {
+    padding: 26px;
+
+    a {
+      padding: 13px 17px;
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      transition-duration: 0.3s;
+      border-radius: 6px;
+
+      &:hover {
+        background-color: purple;
+      }
+    }
+  }
+
+  .scrollDown {
+    height: 80px;
+  }
+}

@@ -238,4 +238,235 @@ textarea {
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 125%;
+  background: #f7f7f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.outerWrapper {
+  width: calc(100% - 90px);
+  margin-left: 90px;
+  overflow: hidden;
+}
+
+.innerWrapper {
+  padding: 0 33px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.sectionContainer {
+  background-color: white;
+  border-radius: 50px;
+  padding: 48px;
+}
+
+.sectionHead {
+  margin-bottom: 50px;
+}
+
+.sectionHead span {
+  padding-bottom: 20px;
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 80px;
+  letter-spacing: 1px;
+}
+
+.sectionHead span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 50px;
+  height: 1px;
+  background: #333;
+}
+
+.sectionHead h2 {
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+}
+
+.sideMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 105px;
+  height: 100vh;
+  background-color: #8444df;
+  position: fixed;
+  color: white;
+}
+
+.sideMenu p {
+  text-align: center;
+  padding: 30px 15px;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  background-color: #773dc8;
+}
+
+.sideMenu nav {
+  padding: 26px;
+}
+
+.sideMenu nav a {
+  padding: 13px 17px;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  border-radius: 6px;
+}
+
+.sideMenu nav a:hover {
+  background-color: purple;
+}
+
+.sideMenu .scrollDown {
+  height: 80px;
+}
+
+header {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+header .heroImageContainer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+header .heroImageContainer img {
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 350px;
+  height: 350px;
+}
+
+header .heroDescription {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  padding: 0 15px;
+  width: 100%;
+}
+
+header .heroDescription .socialsResume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+}
+
+header .heroDescription .socialsResume .resumeLink {
+  width: 140px;
+  background-color: #8444df;
+  padding: 12px 40px;
+  border-radius: 40px;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.socialsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 50px;
+  padding: 10px;
+}
+
+.socialsList li {
+  margin: 0 10px;
+}
+
+.socialsList li a {
+  padding: 4px 9px;
+  background-color: white;
+  border-radius: 6px;
+  color: #8444df;
+  border: 1px solid #eee;
+}
+
+.skillsContainer {
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.skillsGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(80px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+}
+
+.skillsGrid li {
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-radius: 15px;
+  width: 80px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  -webkit-box-shadow: 0px 4px 8px rgba(134, 151, 168, 0.1);
+          box-shadow: 0px 4px 8px rgba(134, 151, 168, 0.1);
+  border: 1px solid #eee;
+}
+
+.skillsGrid li:hover {
+  -webkit-box-shadow: 5px 14px 28px rgba(134, 151, 168, 0.2);
+          box-shadow: 5px 14px 28px rgba(134, 151, 168, 0.2);
+}
+
+.skillsGrid li p {
+  margin-top: 10px;
+}
+
+.skillsGrid li img {
+  width: 35px;
+  height: 35px;
 }

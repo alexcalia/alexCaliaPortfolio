@@ -1,0 +1,60 @@
+header {
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .heroImageContainer {
+    flex: 0 0 50%;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    img {
+      border-radius: 50%;
+      margin: 0 auto;
+      width: 350px;
+      height: 350px;
+    }
+  }
+
+  .heroDescription {
+    flex: 0 0 50%;
+    padding: 0 15px;
+    width: 100%;
+
+    .socialsResume {
+      display: flex;
+      margin-top: 30px;
+
+      .resumeLink {
+        width: 140px;
+        background-color: $purple;
+        padding: 12px 40px;
+        border-radius: 40px;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.socialsList {
+  display: flex;
+  margin-left: 50px;
+  padding: 10px;
+  li {
+    margin: 0 10px;
+
+    a{
+      padding: 4px 9px;
+      background-color: white;
+      border-radius: 6px;
+      color: $purple;
+      border: 1px solid $offWhite;
+    }
+  }
+}
