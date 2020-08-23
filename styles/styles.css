@@ -344,7 +344,9 @@ section {
 }
 
 .sideMenu nav a:hover {
-  background-color: purple;
+  background-color: #9D69E5;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
 }
 
 .sideMenu .scrollDown {
@@ -377,6 +379,7 @@ header .heroImageContainer {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  position: relative;
 }
 
 header .heroImageContainer img {
@@ -384,6 +387,32 @@ header .heroImageContainer img {
   margin: 0 auto;
   width: 350px;
   height: 350px;
+  z-index: 10;
+}
+
+header .heroImageContainer .circle {
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  position: absolute;
+}
+
+header .heroImageContainer .circleOne {
+  background-color: #D9C8F1;
+  z-index: 3;
+  right: 80px;
+}
+
+header .heroImageContainer .circleTwo {
+  background-color: #E2D6F3;
+  z-index: 2;
+  right: 65px;
+}
+
+header .heroImageContainer .circleThree {
+  background-color: #ECE6F5;
+  z-index: 1;
+  right: 50px;
 }
 
 header .heroDescription {
@@ -394,6 +423,35 @@ header .heroDescription {
   width: 100%;
 }
 
+header .heroDescription .greeting {
+  letter-spacing: 1px;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+header .heroDescription h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin: 24px 0;
+}
+
+header .heroDescription h1 span {
+  color: #8444df;
+}
+
+header .heroDescription .smallBio {
+  letter-spacing: 1px;
+  color: #5F6F81;
+  font-size: 1rem;
+  min-width: 250px;
+}
+
+header .heroDescription .smallBio span {
+  color: #8444df;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
 header .heroDescription .socialsResume {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -402,13 +460,20 @@ header .heroDescription .socialsResume {
 }
 
 header .heroDescription .socialsResume .resumeLink {
-  width: 140px;
   background-color: #8444df;
-  padding: 12px 40px;
+  padding: 15px 35px;
   border-radius: 40px;
   letter-spacing: 2px;
   font-size: 0.9rem;
   font-weight: 300;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+header .heroDescription .socialsResume .resumeLink:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
 }
 
 .socialsList {
@@ -416,7 +481,6 @@ header .heroDescription .socialsResume .resumeLink {
   display: -ms-flexbox;
   display: flex;
   margin-left: 50px;
-  padding: 10px;
 }
 
 .socialsList li {
@@ -424,11 +488,21 @@ header .heroDescription .socialsResume .resumeLink {
 }
 
 .socialsList li a {
-  padding: 4px 9px;
+  padding: 9px 10px;
   background-color: white;
   border-radius: 6px;
   color: #8444df;
   border: 1px solid #eee;
+  -webkit-box-shadow: 0px 4px 6px rgba(134, 151, 168, 0.1);
+          box-shadow: 0px 4px 6px rgba(134, 151, 168, 0.1);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  display: inline-block;
+}
+
+.socialsList li a:hover {
+  -webkit-box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
 }
 
 .skillsContainer {
@@ -458,8 +532,8 @@ header .heroDescription .socialsResume .resumeLink {
 }
 
 .skillsGrid li:hover {
-  -webkit-box-shadow: 5px 14px 28px rgba(134, 151, 168, 0.2);
-          box-shadow: 5px 14px 28px rgba(134, 151, 168, 0.2);
+  -webkit-box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
 }
 
 .skillsGrid li p {
@@ -469,4 +543,84 @@ header .heroDescription .socialsResume .resumeLink {
 .skillsGrid li img {
   width: 35px;
   height: 35px;
+}
+
+.workBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+  margin-top: 40px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 14px 28px rgba(134, 151, 168, 0.08);
+          box-shadow: 0px 14px 28px rgba(134, 151, 168, 0.08);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  border: 1px solid #eee;
+}
+
+.workBox:first-child {
+  margin-top: 0;
+}
+
+.workBox:hover {
+  -webkit-box-shadow: 5px 14px 28px rgba(134, 151, 168, 0.2);
+          box-shadow: 5px 14px 28px rgba(134, 151, 168, 0.2);
+}
+
+.workBox .workImageContainer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 350px;
+          flex: 0 0 350px;
+  border-radius: 10px;
+  height: auto;
+}
+
+.workBox .workImageContainer img {
+  width: 100%;
+  height: 196px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.workBox .workDescribeContainer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(100% - 350px);
+          flex: 0 1 calc(100% - 350px);
+  margin-left: 25px;
+}
+
+.workBox .workDescribeContainer h3 {
+  letter-spacing: 1px;
+}
+
+.workBox .workDescribeContainer p {
+  font-size: 0.9rem;
+  margin-top: 20px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+.workBox .workDescribeContainer h4 {
+  font-size: 1rem;
+  margin-top: 7px;
+  letter-spacing: 1px;
+}
+
+.workBox .workDescribeContainer h4 span {
+  color: #8444df;
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.workBox .workDescribeContainer .workLinks {
+  margin-top: 50px;
+}
+
+.workBox .workDescribeContainer .workLinks a {
+  font-size: 1.1rem;
+  margin-right: 20px;
+  color: #8444df;
+  display: inline-block;
+  text-decoration: underline;
 }

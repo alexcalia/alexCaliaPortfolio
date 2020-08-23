@@ -11,12 +11,39 @@ header {
     display: flex;
     justify-content: center;
     width: 100%;
+    position: relative;
 
     img {
       border-radius: 50%;
       margin: 0 auto;
       width: 350px;
       height: 350px;
+      z-index: 10;
+    }
+
+    .circle {
+      border-radius: 50%;
+      width: 350px;
+      height: 350px;
+      position: absolute;
+    }
+
+    .circleOne {
+      background-color: #D9C8F1;
+      z-index: 3;
+      right: 80px;
+    }
+
+    .circleTwo {
+      background-color: #E2D6F3;
+      z-index: 2;
+      right: 65px;
+    }
+
+    .circleThree {
+      background-color: #ECE6F5;
+      z-index: 1;
+      right: 50px;
     }
   }
 
@@ -25,18 +52,52 @@ header {
     padding: 0 15px;
     width: 100%;
 
+    .greeting {
+      letter-spacing: 1px;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      margin: 24px 0;
+
+      span {
+        color: $purple;
+      }
+    }
+
+    .smallBio {
+      letter-spacing: 1px;
+      color: #5F6F81;
+      font-size: 1rem;
+      min-width: 250px;
+
+      span {
+        color: $purple;
+        line-height: 1.8;
+        font-size: 1.1rem;
+      }
+    }
+
     .socialsResume {
       display: flex;
       margin-top: 30px;
 
       .resumeLink {
-        width: 140px;
         background-color: $purple;
-        padding: 12px 40px;
+        padding: 15px 35px;
         border-radius: 40px;
         letter-spacing: 2px;
         font-size: 0.9rem;
         font-weight: 300;
+        display: inline-block;
+        transition: all 0.3s ease-in-out 0s;
+
+        &:hover {
+          box-shadow: 0 14px 28px rgba(0,0,0,0.2);
+        }
       }
     }
   }
@@ -45,16 +106,23 @@ header {
 .socialsList {
   display: flex;
   margin-left: 50px;
-  padding: 10px;
+
   li {
     margin: 0 10px;
 
     a{
-      padding: 4px 9px;
+      padding: 9px 10px;
       background-color: white;
       border-radius: 6px;
       color: $purple;
       border: 1px solid $offWhite;
+      box-shadow: 0px 4px 6px rgba(134, 151, 168, 0.1);
+      transition: all 0.3s ease-in-out 0s;
+      display: inline-block;
+
+      &:hover {
+        box-shadow: 0 7px 15px rgba(0,0,0,0.2);
+      }
     }
   }
 }

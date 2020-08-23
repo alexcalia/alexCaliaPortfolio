@@ -58,13 +58,16 @@
       <header>
         <div class="heroImageContainer">
           <img src="assets/images/avatar.jpg" alt="A picture of Alex Calia">
+          <div class="circle circleOne"></div>
+          <div class="circle circleTwo"></div>
+          <div class="circle circleThree"></div>
         </div>
         <div class="heroDescription">
-          <p>HI THERE !</p>
-          <h1>I'M ALEX CALIA</h1>
-          <p>Passionate about creating complex applications and experiences on the web.</p>
+          <p class="greeting">HI THERE! I'M</p>
+          <h1><span>ALEX</span> CALIA</h1>
+          <p class="smallBio">A <span>Front End Web Developer</span> passionate about creating interactive applications and experiences on the web.</p>
           <div class="socialsResume">
-            <a class="resumeLink" href="assets/Alex Calia- Resume.pdf" alt="Alex Calia's resumé">Resumé</a>
+            <a class="resumeLink" href="assets/Alex-Calia-Resume.pdf" alt="Alex Calia's resumé">Resumé</a>
             <ul class="socialsList">
               <li>
                 <a href="https://www.linkedin.com/in/alexander-calia-33190337/"><i class="lni lni-linkedin-original"></i></a>
@@ -92,7 +95,7 @@
         </section>
 
         <!-- Skils Section -->
-        <section class="skillsSection" id="skill">
+        <section class="skillsSection" id="skills">
           <div class="sectionHead">
             <span>CHECK OUT MY</span>
             <h2>SKILLS</h2>
@@ -102,19 +105,19 @@
             <ul class="skillsGrid">
               <li>
                 <div class="itemContainer">
-                  <img src="assets/skills/html-5.svg">
+                  <img src="assets/skills/html.svg">
                   <p>HTML</p>
                 </div>
               </li>
               <li>
                 <div class="itemContainer">
-                  <img src="assets/skills/css-3.svg">
+                  <img src="assets/skills/css.svg">
                   <p>CSS</p>
                 </div>
               </li>
               <li>
                 <div class="itemContainer">
-                  <img src="assets/skills/sass-1.svg">
+                  <img src="assets/skills/sass.svg">
                   <p>SASS</p>
                 </div>
               </li>
@@ -132,55 +135,56 @@
               </li>
               <li>
                 <div class="itemContainer">
-                  <img src="assets/skills/react-2.svg">
+                  <img src="assets/skills/react.svg">
                   <p>React</p>
                 </div>
+              </li>
               <li>
                 <div class="itemContainer">
-                  <img src="assets/skills/git-icon.svg">
+                  <img src="assets/skills/api.svg" alt="Image from https://commons.wikimedia.org/wiki/File:Cloud-API-Logo.svg">
+                  <p>REST API</p>
+                </div>
+              </li>
+              <li>
+                <div class="itemContainer">
+                  <img src="assets/skills/git.svg">
                   <p>Git</p>
                 </div>
               </li>
               <li>
                 <div class="itemContainer">
-                  <img src="assets/skills/firebase-2.svg">
+                  <img src="assets/skills/firebase.svg">
                   <p>Firebase</p>
                 </div>
               </li>
               <li>
                 <div class="itemContainer">
-                  <img src="assets/skills/visual-studio-code-1.svg">
+                  <img src="assets/skills/vscode.svg">
                   <p>VS Code</p>
                 </div>
               </li>
               <li>
                 <div class="itemContainer">
-                  <img src="assets/skills/microsoft-windows-22.svg">
+                  <img src="assets/skills/microsoftWindows.svg">
                   <p>Windows</p>
                 </div>
               </li>
               <li>
                 <div class="itemContainer">
-                  <img src="assets/skills/microsoft-5.svg">
-                  <p>Microsoft 365</p>
+                  <img src="assets/skills/microsoft.svg">
+                  <p>M365</p>
                 </div>
               </li>
               <li>
                 <div class="itemContainer">
-                  <img>
-                  <p>To be decided</p>
+                  <img src="assets/skills/dns.svg">
+                  <p>DNS</p>
                 </div>
               </li>
               <li>
                 <div class="itemContainer">
-                  <img>
-                  <p>To be decided</p>
-                </div>
-              </li>
-              <li>
-                <div class="itemContainer">
-                  <img>
-                  <p>To be decided</p>
+                  <img src="assets/skills/network.svg">
+                  <p>Networks</p>
                 </div>
               </li>
             </ul>
@@ -196,15 +200,64 @@
 
           <div class="worksContainer sectionContainer">
             <article class="workBox">
-              <h3>Work 1</h3>
+              <div class="workImageContainer">
+                <img src="assets/images/cohort.PNG" alt="COHORT app's Collaborate page.">
+              </div>
+              <div class="workDescribeContainer">
+                <h3>COHORT</h3>
+                <h4>React <span>|</span> Firebase <span>|</span> REST API</h4>
+                <p>Inspire. Reflect. Collaborate.  COHORT is a team collaboration app to get inspired and inspire others.</p>
+                <div class="workLinks">
+                  <a href="https://alexcalia.com/cohort" class="liveLink">Live</a>
+                  <a href="" class="repoLink">Repo</a>
+                </div>
+              </div>
             </article>
 
             <article class="workBox">
-              <h3>Work 2</h3>
+              <div class="workImageContainer">
+                <img src="assets/images/gamescope.PNG" alt="Game Scope landing page.">
+              </div>
+              <div class="workDescribeContainer">
+                <h3>Game Scope</h3>
+                <h4>JQuery <span>|</span> REST API <span>|</span> SASS</h4>
+                <p>Find release dates on upcoming games and catch up on what they're all about.</p>
+                <div class="workLinks">
+                  <a href="https://alexcalia.com/gamescope" class="liveLink">Live</a>
+                  <a href="" class="repoLink">Repo</a>
+                </div>
+              </div>
+              
             </article>
 
             <article class="workBox">
-              <h3>Work 3</h3>
+              <div class="workImageContainer">
+                <img src="assets/images/slangapp.PNG" alt="Twitter Slang Generator page with results diplsayed.">
+              </div>
+              <div class="workDescribeContainer">
+                <h3>Twitter Slang Generator</h3>
+                <h4>JQuery  <span>|</span>  SASS</h4>
+                <p>Find out what those millenials and Gen Z'ers are talking about on your Twitter timeline!</p>
+                <div class="workLinks">
+                  <a href="https://alexcalia.com/slangapp" class="liveLink">Live</a>
+                  <a href="" class="repoLink">Repo</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="workBox">
+              <div class="workImageContainer">
+                <img src="assets/images/psdconversion.PNG" alt="Sanctuary Helpers home page.">
+              </div>
+              <div class="workDescribeContainer">
+                <h3>Sanctuary Helpers</h3>
+                <h4>HTML <span>|</span> CSS</h4>
+                <p>PSD and assets provided by the "client" converted to a multi-page, responsive website. </p>
+                <div class="workLinks">
+                  <a href="https://alexcalia.com/psdconversion" class="liveLink">Live</a>
+                  <a href="" class="repoLink">Repo</a>
+                </div>
+              </div>
             </article>
           </div>
         </section>

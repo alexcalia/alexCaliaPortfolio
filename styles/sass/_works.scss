@@ -1,0 +1,70 @@
+.workBox {
+  display: flex;
+  padding: 30px;
+  margin-top: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 14px 28px rgba(134, 151, 168, 0.08);
+  transition: all 0.3s ease-in-out 0s;
+  border: 1px solid #eee;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:hover {
+    box-shadow: 5px 14px 28px rgba(134, 151, 168, 0.2)
+  }
+
+  .workImageContainer {
+    flex: 0 0 350px;
+    border-radius: 10px;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: 196px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+  }
+
+  .workDescribeContainer {
+    flex: 0 1 calc(100% - 350px);
+    margin-left: 25px;
+
+    h3 {
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 0.9rem;
+      margin-top: 20px;
+      line-height: 1.3;
+      letter-spacing: 1px;
+    }
+
+    h4 {
+      font-size: 1rem;
+      margin-top: 7px;
+      letter-spacing: 1px;
+
+      span {
+        color: $purple;
+        display: inline-block;
+        padding: 0 5px;
+      }
+    }
+
+    .workLinks {
+      margin-top: 50px;
+      
+      a {
+        font-size: 1.1rem;
+        margin-right: 20px;
+        color: $purple;
+        display: inline-block;
+        text-decoration: underline;
+      }
+    }
+  }
+}
