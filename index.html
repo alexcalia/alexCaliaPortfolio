@@ -11,7 +11,7 @@
 
 <body>
   <!-- Side menu -->
-  <aside class="sideMenu"> 
+  <aside class="sideMenu" id="sideMenu"> 
     <p class="logo">Ac</p>
 
     <nav>
@@ -19,31 +19,31 @@
         <li class="homeNav">
           <a href="#home">
             <i class="lni lni-home"></i>
-            <!-- <span>HOME</span> -->
+            <span class="navItemName visuallyHidden">HOME</span>
           </a>
         </li>
         <li class="aboutNav">
           <a href="#about">
             <i class="lni lni-user"></i>
-            <!-- <span>ABOUT</span> -->
+            <span class="navItemName visuallyHidden">ABOUT</span>
           </a>
         </li>
         <li class="skillsNav">
           <a href="#skills">
             <i class="lni lni-code-alt"></i>
-            <!-- <span>SKILLS</span> -->
+            <span class="navItemName visuallyHidden">SKILLS</span>
           </a>
         </li>
         <li class="worksNav">
           <a href="#works">
             <i class="lni lni-briefcase"></i>
-            <!-- <span>WORKS</span> -->
+            <span class="navItemName visuallyHidden">WORKS</span>
           </a>
         </li>
         <li class="contactNav">
           <a href="#contact">
             <i class="lni lni-phone"></i>
-            <!-- <span>CONTACT</span> -->
+            <span class="navItemName visuallyHidden">CONTACT</span>
           </a>
         </li>
       </ul>
@@ -51,16 +51,20 @@
 
     <div class="scrollDown"></div>
   </aside>
+
+  <div class="menuButton" tabindex=0 hidden>
+    <div class="linesContainer">
+      <span></span>
+    </div>
+  </div>
+
   <!--Beginning of the wrapper -->
   <div class="outerWrapper"> 
-    <!-- Header -->
     <div class="innerWrapper">
+      <!-- Header -->
       <header>
         <div class="heroImageContainer">
           <img src="assets/images/avatar.jpg" alt="A picture of Alex Calia">
-          <div class="circle circleOne"></div>
-          <div class="circle circleTwo"></div>
-          <div class="circle circleThree"></div>
         </div>
         <div class="heroDescription">
           <p class="greeting">HI THERE! I'M</p>
@@ -91,7 +95,9 @@
             <h2>ABOUT ME</h2>
           </div>
           
-          <div class="abouContainer sectionContainer"></div>
+          <article class="aboutContainer sectionContainer">
+            <p>I'm a front end web developer with a background in computer systems and network infrastructure. My 8 years of IT experience has given me a strong foundation for web development and building complex solutions. Recently, I graduated from the <span>Juno College Immersive Web Development Bootcamp</span>. I am passionate about coding and solving problems through code, and I am excited to work alongside other amazing programmers and learn so much more!</p>
+          </article>
         </section>
 
         <!-- Skils Section -->
@@ -208,8 +214,8 @@
                 <h4>React <span>|</span> Firebase <span>|</span> REST API</h4>
                 <p>Inspire. Reflect. Collaborate.  COHORT is a team collaboration app to get inspired and inspire others.</p>
                 <div class="workLinks">
-                  <a href="https://alexcalia.com/cohort" class="liveLink">Live</a>
-                  <a href="" class="repoLink">Repo</a>
+                  <a href="https://alexcalia.com/cohort" class="liveLink" target="_blank">Live</a>
+                  <a href="https://github.com/alexcalia/cohortApp" class="repoLink" target="_blank">Repo</a>
                 </div>
               </div>
             </article>
@@ -223,11 +229,10 @@
                 <h4>JQuery <span>|</span> REST API <span>|</span> SASS</h4>
                 <p>Find release dates on upcoming games and catch up on what they're all about.</p>
                 <div class="workLinks">
-                  <a href="https://alexcalia.com/gamescope" class="liveLink">Live</a>
-                  <a href="" class="repoLink">Repo</a>
+                  <a href="https://alexcalia.com/gamescope" class="liveLink" target="_blank">Live</a>
+                  <a href="https://github.com/alexcalia/gamescope" class="repoLink" target="_blank">Repo</a>
                 </div>
               </div>
-              
             </article>
 
             <article class="workBox">
@@ -239,8 +244,8 @@
                 <h4>JQuery  <span>|</span>  SASS</h4>
                 <p>Find out what those millenials and Gen Z'ers are talking about on your Twitter timeline!</p>
                 <div class="workLinks">
-                  <a href="https://alexcalia.com/slangapp" class="liveLink">Live</a>
-                  <a href="" class="repoLink">Repo</a>
+                  <a href="https://alexcalia.com/slangapp" class="liveLink" target="_blank">Live</a>
+                  <a href="https://github.com/alexcalia/slangapp" class="repoLink" target="_blank">Repo</a>
                 </div>
               </div>
             </article>
@@ -252,13 +257,14 @@
               <div class="workDescribeContainer">
                 <h3>Sanctuary Helpers</h3>
                 <h4>HTML <span>|</span> CSS</h4>
-                <p>PSD and assets provided by the "client" converted to a multi-page, responsive website. </p>
+                <p>PSD and assets were provided by the "client" and converted to a multi-page, responsive website. </p>
                 <div class="workLinks">
-                  <a href="https://alexcalia.com/psdconversion" class="liveLink">Live</a>
-                  <a href="" class="repoLink">Repo</a>
+                  <a href="https://alexcalia.com/psdconversion" class="liveLink" target="_blank">Live</a>
+                  <a href="https://github.com/alexcalia/psdconversion" class="repoLink" target="_blank">Repo</a>
                 </div>
               </div>
             </article>
+
           </div>
         </section>
 
@@ -272,30 +278,45 @@
           <div class="contactContainer sectionContainer">
             <h3>Get in Touch</h3>
             <div class="contactTypes">
-              <div class="callContainer"></div>
-              <div class="emailContainer"></div>
+              <div class="flexContainer">
+                <div class="typeBox">
+                  <i class="lni lni-envelope"></i>
+                  <a href="mailto:alex.m.calia@outlook.com">alex.m.calia@outlook.com</a>
+                  <p>Email Me</p>
+                </div>
+              </div>
+              <div class="flexContainer">
+                <div class="typeBox">
+                  <i class="lni lni-calendar"></i>
+                  <a href="https://calendly.com/alexcalia/30min" target="_blank">Calendly</a>
+                  <p>Schedule a Meeting</p>
+                </div>
+              </div>
             </div>
+            <div class="contactFormContainer">
+              <h3>Contact Form</h3>
 
-            <h3>Contact Form</h3>
+              <form id="contactForm" action="https://formspree.io/mbjzeqpq" method="POST">
+                  <label for="nameInput" class="srOnly"></label>
+                  <input type="text" id="nameInput" class="nameInput" required placeholder="Your Name*"/>
+                  <label for="emailInput" class="srOnly"></label>
+                  <input type="email" id="emailInput" class="emailInput" required placeholder="Your Email*" />
+                  <label for="subjectInput" class="srOnly"></label>
+                  <input type="text" id="subjectInput" class="subjectInput" required placeholder="Subject*"/>
+                  <label for="messageInput" class="srOnly"></label>
+                  <textarea class="messageInput" id="messageInput" required placeholder="Your Message*"></textarea>
+              </form>
 
-            <form>
-                <label for="nameInput"></label>
-                <input type="text" id="nameInput" class="nameInput" required />
-                <label for="emailInput"></label>
-                <input type="email" id="emailInput" class="emailInput" required />
-                <label for="subjectInput"></label>
-                <input type="text" id="subjectInput" class="subjectInput" required />
-                <label for="messageInput"></label>
-                <textarea class="messageInput" id="messageInput" required></textarea>
-            </form>
-            
+              <button type="submit" class="formSend" form="contactForm">SEND</button>
+            </div>
           </div> 
 
         </section>
       </main> <!-- End of Main -->
-      <!-- Footer -->
-      <footer></footer>
     </div>
+    <!-- Footer -->
+    <footer></footer>
   </div> <!-- End of the wrapper -->
+  <script type="text/javascript" src="scripts/index.js"></script>
 </body>
 </html>

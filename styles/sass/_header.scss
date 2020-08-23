@@ -12,38 +12,13 @@ header {
     justify-content: center;
     width: 100%;
     position: relative;
-
+    
     img {
       border-radius: 50%;
       margin: 0 auto;
       width: 350px;
       height: 350px;
-      z-index: 10;
-    }
-
-    .circle {
-      border-radius: 50%;
-      width: 350px;
-      height: 350px;
-      position: absolute;
-    }
-
-    .circleOne {
-      background-color: #D9C8F1;
-      z-index: 3;
-      right: 80px;
-    }
-
-    .circleTwo {
-      background-color: #E2D6F3;
-      z-index: 2;
-      right: 65px;
-    }
-
-    .circleThree {
-      background-color: #ECE6F5;
-      z-index: 1;
-      right: 50px;
+      box-shadow: 12px 0 rgba(217, 200, 241, 1), 24px 0 rgba(226, 214, 243, 1), 36px 0 rgba(236, 230, 245, 1);
     }
   }
 
@@ -73,10 +48,10 @@ header {
       color: #5F6F81;
       font-size: 1rem;
       min-width: 250px;
+      line-height: 1.4;
 
       span {
         color: $purple;
-        line-height: 1.8;
         font-size: 1.1rem;
       }
     }
