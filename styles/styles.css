@@ -311,6 +311,8 @@ section {
   padding: 5px;
   top: 35px;
   right: 25px;
+  z-index: 20;
+  display: none;
 }
 
 .menuButton .linesContainer {
@@ -382,15 +384,20 @@ section {
           transition-duration: 0.25s;
   border-radius: 6px;
   width: 100%;
+  position: relative;
 }
 
 .sideMenu nav a span {
   font-size: 0.75rem;
   font-weight: 300;
   letter-spacing: 2px;
-  margin-left: 10px;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
+  position: absolute;
+  left: 55px;
+  top: 18px;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
 .sideMenu nav a:hover {
@@ -401,6 +408,26 @@ section {
 
 .sideMenu .scrollDown {
   height: 80px;
+}
+
+.hoverMenu {
+  width: 220px;
+}
+
+.menuShow {
+  display: block;
+}
+
+.menuHide {
+  display: none;
+}
+
+.sideMenuHide {
+  left: -300px;
+}
+
+.sideMenuShow {
+  left: 0;
 }
 
 header {
@@ -565,11 +592,6 @@ header .heroDescription .socialsResume .resumeLink:hover {
   border: 1px solid #eee;
 }
 
-.skillsGrid li:hover {
-  -webkit-box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
-}
-
 .skillsGrid li p {
   margin-top: 10px;
 }
@@ -597,11 +619,6 @@ header .heroDescription .socialsResume .resumeLink:hover {
   margin-top: 0;
 }
 
-.workBox:hover {
-  -webkit-box-shadow: 5px 14px 28px rgba(134, 151, 168, 0.2);
-          box-shadow: 5px 14px 28px rgba(134, 151, 168, 0.2);
-}
-
 .workBox .workImageContainer {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 350px;
@@ -612,7 +629,6 @@ header .heroDescription .socialsResume .resumeLink:hover {
 
 .workBox .workImageContainer img {
   width: 100%;
-  height: 196px;
   border-radius: 10px;
   border: 1px solid #ddd;
 }
@@ -700,11 +716,6 @@ header .heroDescription .socialsResume .resumeLink:hover {
   border-radius: 15px;
 }
 
-.contactTypes .flexContainer .typeBox:hover {
-  -webkit-box-shadow: 0px 14px 28px rgba(134, 151, 168, 0.08);
-          box-shadow: 0px 14px 28px rgba(134, 151, 168, 0.08);
-}
-
 .contactTypes .flexContainer .typeBox i {
   display: inline-block;
   padding: 18px;
@@ -771,6 +782,7 @@ header .heroDescription .socialsResume .resumeLink:hover {
   font-size: 1rem;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
+  width: 100%;
 }
 
 .contactFormContainer form input:focus,
@@ -848,4 +860,152 @@ header .heroDescription .socialsResume .resumeLink:hover {
 .contactFormContainer button:hover {
   -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1040px) {
+  .contactFormContainer form {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .contactFormContainer form .subjectInput,
+  .contactFormContainer form .messageInput {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 /2;
+  }
+}
+
+@media (min-width: 991px) {
+  .navItemName {
+    display: none;
+  }
+  .sideMenu:hover {
+    width: 220px;
+  }
+  .sideMenu:hover .navItemName {
+    display: block;
+  }
+}
+
+@media (max-width: 990px) {
+  .outerWrapper {
+    width: 100%;
+    margin-left: 0;
+  }
+  .sideMenu {
+    width: 220px;
+  }
+  .menuButton {
+    display: block;
+  }
+  header {
+    display: block;
+    padding: 80px 0;
+    height: auto;
+  }
+  header .heroDescription {
+    text-align: center;
+    margin-top: 50px;
+  }
+  header .heroDescription .socialsResume {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .socialsList {
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .skillsGrid li:hover {
+    -webkit-box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+  }
+  .workBox:hover {
+    -webkit-box-shadow: 5px 14px 28px rgba(134, 151, 168, 0.2);
+            box-shadow: 5px 14px 28px rgba(134, 151, 168, 0.2);
+  }
+  .contactTypes .flexContainer .typeBox:hover {
+    -webkit-box-shadow: 0px 14px 28px rgba(134, 151, 168, 0.08);
+            box-shadow: 0px 14px 28px rgba(134, 151, 168, 0.08);
+  }
+}
+
+@media (max-width: 767px) {
+  .innerWrapper {
+    padding: 0 15px;
+  }
+  header .heroImageContainer img {
+    width: 250px;
+    height: 250px;
+  }
+  .sectionContainer {
+    background-color: transparent;
+    padding: 0;
+  }
+  .aboutContainer {
+    line-height: 1.3;
+    font-size: 1rem;
+  }
+  .workBox {
+    display: block;
+    padding: 0;
+  }
+  .workBox .workImageContainer {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .workBox .workDescribeContainer {
+    margin-left: 0;
+    margin-top: 20px;
+    padding: 20px;
+  }
+  .workBox .workDescribeContainer .workLinks {
+    margin-top: 25px;
+  }
+  .skillsGrid {
+    row-gap: 15px;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+  }
+  .contactTypes {
+    display: block;
+  }
+  .contactTypes .flexContainer {
+    max-width: 100%;
+  }
+  .contactTypes .flexContainer:first-child {
+    padding: 0;
+  }
+  .contactTypes .flexContainer:last-child {
+    padding: 0;
+  }
+  .contactTypes .flexContainer .typeBox:first-child {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    padding: 40px 0;
+  }
+  header .heroDescription .socialsResume {
+    display: block;
+  }
+  header .heroImageContainer img {
+    -webkit-box-shadow: 12px 0 #d9c8f1;
+            box-shadow: 12px 0 #d9c8f1;
+  }
+  .socialsList {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+  .contactFormContainer form input,
+  .contactFormContainer form textarea {
+    max-width: 380px;
+  }
 }

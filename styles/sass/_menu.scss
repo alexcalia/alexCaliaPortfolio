@@ -6,6 +6,8 @@
   padding: 5px;
   top: 35px;
   right: 25px;
+  z-index: 20;
+  display: none;
 
   .linesContainer {
       position: relative;
@@ -65,13 +67,17 @@
       transition-duration: 0.25s;
       border-radius: 6px;
       width: 100%;
+      position: relative;
 
       span {
         font-size: 0.75rem;
         font-weight: 300;
         letter-spacing: 2px;
-        margin-left: 10px;
         transition-duration: 0.2s;
+        position: absolute;
+        left: 55px;
+        top: 18px;
+        transition-delay: 0.1s;
       }
 
       &:hover {
@@ -84,4 +90,24 @@
   .scrollDown {
     height: 80px;
   }
+}
+
+.hoverMenu {
+  width: 220px;
+}
+
+.menuShow {
+  display: block;
+}
+
+.menuHide {
+  display: none;
+}
+
+.sideMenuHide {
+  left: -300px;
+}
+
+.sideMenuShow {
+  left: 0;
 }

@@ -32,10 +32,6 @@
       padding: 24px;
       border-radius: 15px;
 
-      &:hover {
-        box-shadow: 0px 14px 28px rgba(134, 151, 168, 0.08);
-      }
-
       i {
         display: inline-block;
         padding: 18px;
@@ -92,6 +88,7 @@
       font-size: 1rem;
       font-family: 'Poppins', sans-serif;
       letter-spacing: 1px;
+      width: 100%;
 
       &:focus {
         border-color: #80bdff;

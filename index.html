@@ -11,7 +11,7 @@
 
 <body>
   <!-- Side menu -->
-  <aside class="sideMenu" id="sideMenu"> 
+  <aside class="sideMenu sideMenuShow" id="sideMenu"> 
     <p class="logo">Ac</p>
 
     <nav>
@@ -19,31 +19,31 @@
         <li class="homeNav">
           <a href="#home">
             <i class="lni lni-home"></i>
-            <span class="navItemName visuallyHidden">HOME</span>
+            <span class="navItemName">HOME</span>
           </a>
         </li>
         <li class="aboutNav">
           <a href="#about">
             <i class="lni lni-user"></i>
-            <span class="navItemName visuallyHidden">ABOUT</span>
+            <span class="navItemName">ABOUT</span>
           </a>
         </li>
         <li class="skillsNav">
           <a href="#skills">
             <i class="lni lni-code-alt"></i>
-            <span class="navItemName visuallyHidden">SKILLS</span>
+            <span class="navItemName">SKILLS</span>
           </a>
         </li>
         <li class="worksNav">
           <a href="#works">
             <i class="lni lni-briefcase"></i>
-            <span class="navItemName visuallyHidden">WORKS</span>
+            <span class="navItemName">WORKS</span>
           </a>
         </li>
         <li class="contactNav">
           <a href="#contact">
             <i class="lni lni-phone"></i>
-            <span class="navItemName visuallyHidden">CONTACT</span>
+            <span class="navItemName">CONTACT</span>
           </a>
         </li>
       </ul>
@@ -52,7 +52,7 @@
     <div class="scrollDown"></div>
   </aside>
 
-  <div class="menuButton" tabindex=0 hidden>
+  <div class="menuButton" id="menuButton" tabindex=0>
     <div class="linesContainer">
       <span></span>
     </div>
@@ -317,6 +317,7 @@
     <!-- Footer -->
     <footer></footer>
   </div> <!-- End of the wrapper -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="scripts/index.js"></script>
 </body>
 </html>
