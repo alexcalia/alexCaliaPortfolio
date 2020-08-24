@@ -39,7 +39,7 @@ header {
       margin: 24px 0;
 
       span {
-        color: $purple;
+        color: $mainColor;
       }
     }
 
@@ -51,7 +51,7 @@ header {
       line-height: 1.4;
 
       span {
-        color: $purple;
+        color: $mainColor;
         font-size: 1.1rem;
       }
     }
@@ -61,17 +61,21 @@ header {
       margin-top: 30px;
 
       .resumeLink {
-        background-color: $purple;
+        background-color: $mainColor;
         padding: 15px 35px;
         border-radius: 40px;
         letter-spacing: 2px;
         font-size: 0.9rem;
         font-weight: 300;
         display: inline-block;
-        transition: all 0.3s ease-in-out 0s;
+        transition: $transitionEase;
 
         &:hover {
           box-shadow: 0 14px 28px rgba(0,0,0,0.2);
+        }
+
+        &:focus {
+          @include focusBorder;
         }
       }
     }
@@ -89,14 +93,18 @@ header {
       padding: 9px 10px;
       background-color: white;
       border-radius: 6px;
-      color: $purple;
+      color: $mainColor;
       border: 1px solid $offWhite;
       box-shadow: 0px 4px 6px rgba(134, 151, 168, 0.1);
-      transition: all 0.3s ease-in-out 0s;
+      transition: $transitionEase;
       display: inline-block;
 
       &:hover {
         box-shadow: 0 7px 15px rgba(0,0,0,0.2);
+      }
+
+      &:focus {
+        @include focusBorder;
       }
     }
   }

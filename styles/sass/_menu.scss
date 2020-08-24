@@ -3,15 +3,18 @@
   position: fixed;
   height: 30px;
   width: 35px;
-  padding: 5px;
+  padding: 10px;
   top: 35px;
   right: 25px;
   z-index: 20;
   display: none;
 
+  &:focus {
+    border: 2px solid $mainColor;
+  }
+
   .linesContainer {
       position: relative;
-
       span, span:before, span:after {
       border-radius: 5px;
       width: 25px;
@@ -23,7 +26,8 @@
     }
 
     span {
-      top: 10px;
+      top: 3px;
+      left: -6px;
     }
     span:before {
       top: -10px;
@@ -41,10 +45,10 @@
   justify-content: space-between;
   width: 105px;
   height: 100vh;
-  background-color: $purple;
+  background-color: $mainColor;
   position: fixed;
   color: white;
-  transition: all 0.3s ease-in;
+  transition: $transitionEase;
   z-index: 10;
 
   p {
@@ -80,7 +84,8 @@
         transition-delay: 0.1s;
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: #9D69E5;
         box-shadow: 0 14px 28px rgba(0,0,0,0.2);
       }
@@ -88,7 +93,22 @@
   }
 
   .scrollDown {
-    height: 80px;
+    height: 50px;
+    position: relative;
+    left: 35px;
+
+    .lni-arrow-down {
+      line-height: 1.2;
+      font-size: 2rem;
+    }
+
+    .scrollDownText {
+      font-size: 0.75rem;
+      position: absolute;
+      top: 10px;
+      left: 30px;
+      font-weight: 300;
+    }
   }
 }
 

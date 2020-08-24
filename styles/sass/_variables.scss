@@ -1,7 +1,15 @@
-$purple: #8444df;
+$mainColor: #8444df;
 $darkWhite: #f7f7f7;
 $offWhite: #eee;
-$boxShadow: 0px 4px 8px rgba(134, 151, 168, 0.1);
-$transition: all 0.3s ease-in-out 0s;
-$borderRadiusS: 15px;
-$borderRadiusL: 50px;
+$lightBlack: #333;
+
+$transitionEase: all 0.3s ease-in;
+$plainFocus: 2px solid $mainColor;
+
+$smallBorder: 1px solid $offWhite;
+
+@mixin focusBorder {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}

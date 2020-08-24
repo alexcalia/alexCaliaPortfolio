@@ -1,5 +1,7 @@
+/**********************/
+/*   MAX WIDTH 1040PX */
+/**********************/
 @media (max-width: 1040px) {
-
   .contactFormContainer {
     form {
       grid-template-columns: repeat(1, 1fr);
@@ -12,6 +14,9 @@
   }
 }
 
+/**********************/
+/*   MIN WIDTH 991PX  */
+/**********************/
 @media (min-width: 991px) {
   .navItemName {
     display: none;
@@ -26,6 +31,9 @@
   }
 }
 
+/**********************/
+/*   MAX WIDTH 900PX  */
+/**********************/
 @media (max-width: 990px) {
   .outerWrapper {
     width: 100%;
@@ -34,6 +42,11 @@
 
   .sideMenu {
     width: 220px;
+    justify-content: flex-start;
+
+    nav {
+      margin-top: 40px;
+    }
   }
 
   .menuButton {
@@ -60,6 +73,9 @@
   }
 }
 
+/**********************/
+/*   MIN WIDTH 768PX  */
+/**********************/
 @media (min-width: 768px) {
   .skillsGrid li:hover {
     box-shadow: 0 10px 28px rgba(0,0,0,0.2);
@@ -74,7 +90,11 @@
   }
 }
 
+/**********************/
+/*   MAX WIDTH 767PX  */
+/**********************/
 @media (max-width: 767px) {
+  // General Styles
   .innerWrapper {
     padding: 0 15px;
   }
@@ -94,6 +114,7 @@
     font-size: 1rem;
   }
 
+  // Works Section
   .workBox {
     display: block;
     padding: 0;
@@ -114,11 +135,13 @@
     }
   }
 
+  // Skills Section
   .skillsGrid {
     row-gap: 15px;
     column-gap: 15px;
   }
 
+  // Contact Section
   .contactTypes {
     display: block;
     
@@ -140,6 +163,9 @@
   } 
 }
 
+/**********************/
+/*   MAX WIDTH 400PX  */
+/**********************/
 @media (max-width: 400px) {
   header {
     padding: 40px 0;

@@ -10,6 +10,13 @@
 </head>
 
 <body>
+  <!-- Mobile menu button -->
+  <div id="home" class="visuallyHidden"></div>
+  <div class="menuButton" id="menuButton" tabindex=0>
+    <div class="linesContainer">
+      <span></span>
+    </div>
+  </div>
   <!-- Side menu -->
   <aside class="sideMenu sideMenuShow" id="sideMenu"> 
     <p class="logo">Ac</p>
@@ -17,31 +24,31 @@
     <nav>
       <ul class="navBar">
         <li class="homeNav">
-          <a href="#home">
+          <a href="#home" class="navItem">
             <i class="lni lni-home"></i>
             <span class="navItemName">HOME</span>
           </a>
         </li>
         <li class="aboutNav">
-          <a href="#about">
+          <a href="#about" class="navItem">
             <i class="lni lni-user"></i>
             <span class="navItemName">ABOUT</span>
           </a>
         </li>
         <li class="skillsNav">
-          <a href="#skills">
+          <a href="#skills" class="navItem">
             <i class="lni lni-code-alt"></i>
             <span class="navItemName">SKILLS</span>
           </a>
         </li>
         <li class="worksNav">
-          <a href="#works">
+          <a href="#works" class="navItem">
             <i class="lni lni-briefcase"></i>
             <span class="navItemName">WORKS</span>
           </a>
         </li>
         <li class="contactNav">
-          <a href="#contact">
+          <a href="#contact" class="navItem">
             <i class="lni lni-phone"></i>
             <span class="navItemName">CONTACT</span>
           </a>
@@ -49,14 +56,11 @@
       </ul>
     </nav>
 
-    <div class="scrollDown"></div>
-  </aside>
-
-  <div class="menuButton" id="menuButton" tabindex=0>
-    <div class="linesContainer">
-      <span></span>
+    <div class="scrollDown" id="scrollDown">
+      <i class="lni lni-arrow-down"></i>
+      <span class="navItemName scrollDownText">Scroll Down</span>
     </div>
-  </div>
+  </aside>
 
   <!--Beginning of the wrapper -->
   <div class="outerWrapper"> 
@@ -64,23 +68,23 @@
       <!-- Header -->
       <header>
         <div class="heroImageContainer">
-          <img src="assets/images/avatar.jpg" alt="A picture of Alex Calia">
+          <img src="assets/images/me.jpg" alt="A picture of Alex Calia.">
         </div>
         <div class="heroDescription">
           <p class="greeting">HI THERE! I'M</p>
           <h1><span>ALEX</span> CALIA</h1>
           <p class="smallBio">A <span>Front End Web Developer</span> passionate about creating interactive applications and experiences on the web.</p>
           <div class="socialsResume">
-            <a class="resumeLink" href="assets/Alex-Calia-Resume.pdf" alt="Alex Calia's resumé">Resumé</a>
+            <a class="resumeLink" href="assets/Alex-Calia-Resume.pdf" alt="Alex Calia's resumé" target="_blank">Resumé</a>
             <ul class="socialsList">
               <li>
-                <a href="https://www.linkedin.com/in/alexander-calia-33190337/"><i class="lni lni-linkedin-original"></i></a>
+                <a href="https://www.linkedin.com/in/alexander-calia-33190337/" target="_blank"><i class="lni lni-linkedin-original" aria-label="Link to Alex's LinkedIn page."></i></a>
               </li>
               <li>
-                <a href="https://github.com/alexcalia"><i class="lni lni-github-original"></i></a>
+                <a href="https://github.com/alexcalia" target="_blank"><i class="lni lni-github-original" aria-label="Link to Alex's GitHub page."></i></a>
               </li>
               <li>
-                <a href="https://twitter.com/AlexanderCalia"><i class="lni lni-twitter-original"></i></a>
+                <a href="https://twitter.com/AlexanderCalia" target="_blank"><i class="lni lni-twitter-original" aria-label="Link to Alex's Twitter profile."></i></a>
               </li>
             </ul>
           </div>
@@ -298,16 +302,16 @@
 
               <form id="contactForm" action="https://formspree.io/mbjzeqpq" method="POST">
                   <label for="nameInput" class="srOnly"></label>
-                  <input type="text" id="nameInput" class="nameInput" required placeholder="Your Name*"/>
+                  <input type="text" id="nameInput" name="nameInput" class="nameInput" required placeholder="Your Name*"/>
                   <label for="emailInput" class="srOnly"></label>
-                  <input type="email" id="emailInput" class="emailInput" required placeholder="Your Email*" />
+                  <input type="email" id="emailInput" name="emailInput" class="emailInput" required placeholder="Your Email*" />
                   <label for="subjectInput" class="srOnly"></label>
-                  <input type="text" id="subjectInput" class="subjectInput" required placeholder="Subject*"/>
+                  <input type="text" id="subjectInput" name="subjectInput" class="subjectInput" required placeholder="Subject*"/>
                   <label for="messageInput" class="srOnly"></label>
-                  <textarea class="messageInput" id="messageInput" required placeholder="Your Message*"></textarea>
+                  <textarea class="messageInput" name="messageInput" id="messageInput" required placeholder="Your Message*"></textarea>
               </form>
 
-              <button type="submit" class="formSend" form="contactForm">SEND</button>
+              <button type="submit" class="formSend" target="_blank" form="contactForm">SEND</button>
             </div>
           </div> 
 
@@ -315,7 +319,10 @@
       </main> <!-- End of Main -->
     </div>
     <!-- Footer -->
-    <footer></footer>
+    <footer>
+      <p>&copy; Alex Calia 2020</p>
+    </footer>
+    <!-- Icons provided by https://lineicons.com/ -->
   </div> <!-- End of the wrapper -->
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="scripts/index.js"></script>

@@ -308,11 +308,15 @@ section {
   position: fixed;
   height: 30px;
   width: 35px;
-  padding: 5px;
+  padding: 10px;
   top: 35px;
   right: 25px;
   z-index: 20;
   display: none;
+}
+
+.menuButton:focus {
+  border: 2px solid #8444df;
 }
 
 .menuButton .linesContainer {
@@ -330,7 +334,8 @@ section {
 }
 
 .menuButton .linesContainer span {
-  top: 10px;
+  top: 3px;
+  left: -6px;
 }
 
 .menuButton .linesContainer span:before {
@@ -400,14 +405,29 @@ section {
           transition-delay: 0.1s;
 }
 
-.sideMenu nav a:hover {
+.sideMenu nav a:hover, .sideMenu nav a:focus {
   background-color: #9D69E5;
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
 }
 
 .sideMenu .scrollDown {
-  height: 80px;
+  height: 50px;
+  position: relative;
+  left: 35px;
+}
+
+.sideMenu .scrollDown .lni-arrow-down {
+  line-height: 1.2;
+  font-size: 2rem;
+}
+
+.sideMenu .scrollDown .scrollDownText {
+  font-size: 0.75rem;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-weight: 300;
 }
 
 .hoverMenu {
@@ -520,13 +540,20 @@ header .heroDescription .socialsResume .resumeLink {
   font-size: 0.9rem;
   font-weight: 300;
   display: inline-block;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 header .heroDescription .socialsResume .resumeLink:hover {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+}
+
+header .heroDescription .socialsResume .resumeLink:focus {
+  border-color: #80bdff;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .socialsList {
@@ -548,14 +575,21 @@ header .heroDescription .socialsResume .resumeLink:hover {
   border: 1px solid #eee;
   -webkit-box-shadow: 0px 4px 6px rgba(134, 151, 168, 0.1);
           box-shadow: 0px 4px 6px rgba(134, 151, 168, 0.1);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
   display: inline-block;
 }
 
 .socialsList li a:hover {
   -webkit-box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
           box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+}
+
+.socialsList li a:focus {
+  border-color: #80bdff;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
 .aboutContainer p {
@@ -585,8 +619,8 @@ header .heroDescription .socialsResume .resumeLink:hover {
   padding: 10px;
   border-radius: 15px;
   width: 80px;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
   -webkit-box-shadow: 0px 4px 8px rgba(134, 151, 168, 0.1);
           box-shadow: 0px 4px 8px rgba(134, 151, 168, 0.1);
   border: 1px solid #eee;
@@ -610,8 +644,8 @@ header .heroDescription .socialsResume .resumeLink:hover {
   border-radius: 15px;
   -webkit-box-shadow: 0px 14px 28px rgba(134, 151, 168, 0.08);
           box-shadow: 0px 14px 28px rgba(134, 151, 168, 0.08);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
   border: 1px solid #eee;
 }
 
@@ -675,6 +709,10 @@ header .heroDescription .socialsResume .resumeLink:hover {
   text-decoration: underline;
 }
 
+.workBox .workDescribeContainer .workLinks a:focus {
+  border: 2px solid #8444df;
+}
+
 .contactContainer h3 {
   letter-spacing: 1px;
   margin-bottom: 24px;
@@ -709,8 +747,8 @@ header .heroDescription .socialsResume .resumeLink:hover {
 .contactTypes .flexContainer .typeBox {
   -webkit-box-shadow: 0px 4px 8px rgba(134, 151, 168, 0.1);
           box-shadow: 0px 4px 8px rgba(134, 151, 168, 0.1);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
   border: 1px solid #eee;
   padding: 24px;
   border-radius: 15px;
@@ -741,6 +779,10 @@ header .heroDescription .socialsResume .resumeLink:hover {
   color: #333;
   text-decoration: underline;
   font-size: 1rem;
+}
+
+.contactTypes .flexContainer .typeBox a:focus {
+  border: 2px solid #8444df;
 }
 
 .contactTypes .flexContainer .typeBox p {
@@ -776,8 +818,8 @@ header .heroDescription .socialsResume .resumeLink:hover {
 .contactFormContainer form input,
 .contactFormContainer form textarea {
   border: 1px solid #eee;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
   padding: 11px 20px;
   font-size: 1rem;
   font-family: 'Poppins', sans-serif;
@@ -846,8 +888,8 @@ header .heroDescription .socialsResume .resumeLink:hover {
   border-radius: 40px;
   width: 140px;
   margin: 0 auto;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .contactFormContainer button:focus {
@@ -862,6 +904,22 @@ header .heroDescription .socialsResume .resumeLink:hover {
           box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.2);
 }
 
+footer {
+  padding: 20px;
+  background-color: white;
+}
+
+footer p {
+  width: 200px;
+  margin: 0 auto;
+  color: #333;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/**********************/
+/*   MAX WIDTH 1040PX */
+/**********************/
 @media (max-width: 1040px) {
   .contactFormContainer form {
     -ms-grid-columns: (1fr)[1];
@@ -875,6 +933,9 @@ header .heroDescription .socialsResume .resumeLink:hover {
   }
 }
 
+/**********************/
+/*   MIN WIDTH 991PX  */
+/**********************/
 @media (min-width: 991px) {
   .navItemName {
     display: none;
@@ -887,6 +948,9 @@ header .heroDescription .socialsResume .resumeLink:hover {
   }
 }
 
+/**********************/
+/*   MAX WIDTH 900PX  */
+/**********************/
 @media (max-width: 990px) {
   .outerWrapper {
     width: 100%;
@@ -894,6 +958,12 @@ header .heroDescription .socialsResume .resumeLink:hover {
   }
   .sideMenu {
     width: 220px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .sideMenu nav {
+    margin-top: 40px;
   }
   .menuButton {
     display: block;
@@ -917,6 +987,9 @@ header .heroDescription .socialsResume .resumeLink:hover {
   }
 }
 
+/**********************/
+/*   MIN WIDTH 768PX  */
+/**********************/
 @media (min-width: 768px) {
   .skillsGrid li:hover {
     -webkit-box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
@@ -932,6 +1005,9 @@ header .heroDescription .socialsResume .resumeLink:hover {
   }
 }
 
+/**********************/
+/*   MAX WIDTH 767PX  */
+/**********************/
 @media (max-width: 767px) {
   .innerWrapper {
     padding: 0 15px;
@@ -986,6 +1062,9 @@ header .heroDescription .socialsResume .resumeLink:hover {
   }
 }
 
+/**********************/
+/*   MAX WIDTH 400PX  */
+/**********************/
 @media (max-width: 400px) {
   header {
     padding: 40px 0;
