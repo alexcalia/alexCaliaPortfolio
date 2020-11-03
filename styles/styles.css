@@ -303,6 +303,10 @@ section {
   font-size: 1.6rem;
 }
 
+.techStack {
+  color: #8444df;
+}
+
 .menuButton {
   cursor: pointer;
   position: fixed;
@@ -689,6 +693,7 @@ header .heroDescription .socialsResume .resumeLink:focus {
   font-size: 1rem;
   margin-top: 7px;
   letter-spacing: 1px;
+  line-height: 1.2;
 }
 
 .workBox .workDescribeContainer h4 span {
