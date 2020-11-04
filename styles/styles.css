@@ -682,11 +682,21 @@ header .heroDescription .socialsResume .resumeLink:focus {
   letter-spacing: 1px;
 }
 
+.workBox .workDescribeContainer ul {
+  list-style: disc inside;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+.workBox .workDescribeContainer ul li:not(:first-child) {
+  margin-top: 10px;
+}
+
 .workBox .workDescribeContainer p {
   font-size: 0.9rem;
   margin-top: 20px;
-  line-height: 1.3;
-  letter-spacing: 1px;
 }
 
 .workBox .workDescribeContainer h4 {
